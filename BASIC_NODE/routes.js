@@ -10,6 +10,7 @@ const server=http.createServer((req,res)=>{
     res.setHeader("Content-Type", "text/html");
    res.end('<marquee behavior="scroll" direction="left"><h1></h1></marquee>');
   }
+  
   else if(req.url=='/contact'){
     res.setHeader("Content-Type", "text/html");
     res.end('<h1>Cotact </h1><h2>Agin</h2>')
