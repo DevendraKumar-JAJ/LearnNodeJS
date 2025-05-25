@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      * {
+        box-sizing: border-box;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      h1 {
+        text-align: center;
+        font-weight: 900;
+        padding: 5px;
+
+        border-bottom: 1px solid;
+      }
+      ul {
+        width: 100%;
+        padding: 10px 15px;
+        background-color: black;
+        color: azure;
+        .main {
+          border: 1px solid azure;
+          padding: 10px 15px;
+          .name {
+            font-size: 16px;
+            color: aliceblue;
+            padding: 3px 5px;
+            font-weight: 900;
+          }
+          .con {
+            font-size: 10px;
+            background-color: rgba(255, 99, 71, 0.611);
+            padding: 3px 5px;
+            font-weight: 700;
+            color: aliceblue;
+          }
+        }
+        .form{
+          display: flex;
+          justify-content: space-evenly;
+          align-items: center;
+        }
+        button {
+          margin-top: 5px;
+          padding: 3px 5px;
+          cursor: pointer;
+          border-radius: 0;
+          outline: none;
+          border: 1px solid azure;
+        }
+      }
+
+    </style>
+    <title>Posts</title>
+  </head>
+  <body>
+    <h1>My App posts</h1>
+    <% if(posts.length>0) {%> 
+      <ul type="none">
+        <% posts.forEach(post => { %>
+        <div class="main">
+          <li class="name">
+            @<%=post.username.toLowerCase()%> | Id : <%= post.id%>
+          </li>
+          <li class="con">Contant : <%= post.content %></li>
+          <div class="form">
+            <form action="/posts/<%= post.id %>/edit" method="get">
+              <button type="submit" value="<%= post.id%>" name="id">Edit</button>
+            </form>
+            <form action="/posts/<%= post.id %>?_method=DELETE" method="post">
+              <button type="submit" value="<%= post.id%>" name="id">Delete</button>
+            </form>
+          </div>
+        </div>
+        <%}); %>
+      </ul>
+      <%} else {%> 
+        <%- include('form.ejs'); %>
+        <%}%>
+  </body>
+</html>
