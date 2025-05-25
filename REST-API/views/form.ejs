@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body{
+      text-align: center;
+      background-color: #000;
+      padding-top: 50px;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    input{
+      background-color: #000;
+      padding: 3px 5px;
+      border: none;
+      color: azure;
+      border-bottom: 1px solid aliceblue;
+      margin-bottom: 5px;
+      outline: none;
+    }
+    button{
+      color: azure;
+      background-color: #000000;
+      outline: none;
+      border: 1px solid aliceblue;
+      margin-top: 10px;
+      cursor: pointer;
+      font-weight: 700;
+      
+      border-radius: 3px;
+      padding: 3px 5px;
+    }
+    h1{
+      
+      color: azure;
+    }
+  </style>
+  <title>New Post</title>
+</head>
+<body>
+  <h1>Add new post</h1>
+  <form method="post" action="/posts" >
+    <input type="text" placeholder="Abc Xyz" pattern="[a-zA-Z]+" name="username"> <br>
+    <input type="text" placeholder="content" name="content"  > <br>
+    <button type="submit">Add</button>
+  </form>
+
+</body>
+</html>
