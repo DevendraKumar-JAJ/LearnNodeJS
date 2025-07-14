@@ -5,8 +5,6 @@ Welcome to my Node.js learning repository! 🚀 This repo is a collection of pro
 ## Table of Contents 📖
 - #node.js-basics
 - #express.js
-- #mongodb
-- #mysql
 - #rest-api
 - #ejs-templating
 - #routing
@@ -26,19 +24,6 @@ In this section, I've explored the Express.js framework, including:
 - Handling requests and responses
 - Error handling
 
-## MongoDB 🍃
-In this section, I've learned about MongoDB, including:
-
-- Connecting to a MongoDB database
-- Creating, reading, updating, and deleting documents
-- Using Mongoose to interact with MongoDB
-
-## MySQL 🗄
-In this section, I've covered MySQL, including:
-
-- Connecting to a MySQL database
-- Creating, reading, updating, and deleting data
-- Using SQL queries to interact with MySQL
 
 ## REST API 📱
 In this section, I've built a RESTful API using Node.js and Express.js, including:
